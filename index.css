@@ -2,3 +2,6 @@ a:visited, a, a:link{
   color:#333;
 }
 
+.intro-header .page-heading {
+    text-align: center;
+}
