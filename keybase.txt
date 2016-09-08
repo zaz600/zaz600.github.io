@@ -1,0 +1,54 @@
+==================================================================
+https://keybase.io/zaz600
+--------------------------------------------------------------------
+
+I hereby claim:
+
+  * I am an admin of https://zaz600.github.io
+  * I am zaz600 (https://keybase.io/zaz600) on keybase.
+  * I have a public key ASCR4-dXLx4WAwKtnt7blRY1gp28e8r_9EOXnsEUDAOyWwo
+
+To do so, I am signing this object:
+
+{
+    "body": {
+        "key": {
+            "eldest_kid": "012091e3e7572f1e160302ad9ededb951635829dbc7bcafff443979ec1140c03b25b0a",
+            "host": "keybase.io",
+            "kid": "012091e3e7572f1e160302ad9ededb951635829dbc7bcafff443979ec1140c03b25b0a",
+            "uid": "b9cd8ba73bf42e5a8fcf399997e76e19",
+            "username": "zaz600"
+        },
+        "service": {
+            "hostname": "zaz600.github.io",
+            "protocol": "https:"
+        },
+        "type": "web_service_binding",
+        "version": 1
+    },
+    "client": {
+        "name": "keybase.io go client",
+        "version": "1.0.17"
+    },
+    "ctime": 1473359508,
+    "expire_in": 504576000,
+    "merkle_root": {
+        "ctime": 1473359451,
+        "hash": "f25d92e8580b3f8c9b609349255848aecc91fcebe1e6fdf3de429f22bbed0188490d1ad455fc90aeef311efd56b7fe8a5612d09bf1732d3939395b62a220758c",
+        "seqno": 625487
+    },
+    "prev": "d5878b56ae3671d46487da0869e30d55ede90e094c5874e53b124d3bb06eb096",
+    "seqno": 8,
+    "tag": "signature"
+}
+
+which yields the signature:
+
+hKRib2R5hqhkZXRhY2hlZMOpaGFzaF90eXBlCqNrZXnEIwEgkePnVy8eFgMCrZ7e25UWNYKdvHvK//RDl57BFAwDslsKp3BheWxvYWTFAvZ7ImJvZHkiOnsia2V5Ijp7ImVsZGVzdF9raWQiOiIwMTIwOTFlM2U3NTcyZjFlMTYwMzAyYWQ5ZWRlZGI5NTE2MzU4MjlkYmM3YmNhZmZmNDQzOTc5ZWMxMTQwYzAzYjI1YjBhIiwiaG9zdCI6ImtleWJhc2UuaW8iLCJraWQiOiIwMTIwOTFlM2U3NTcyZjFlMTYwMzAyYWQ5ZWRlZGI5NTE2MzU4MjlkYmM3YmNhZmZmNDQzOTc5ZWMxMTQwYzAzYjI1YjBhIiwidWlkIjoiYjljZDhiYTczYmY0MmU1YThmY2YzOTk5OTdlNzZlMTkiLCJ1c2VybmFtZSI6InphejYwMCJ9LCJzZXJ2aWNlIjp7Imhvc3RuYW1lIjoiemF6NjAwLmdpdGh1Yi5pbyIsInByb3RvY29sIjoiaHR0cHM6In0sInR5cGUiOiJ3ZWJfc2VydmljZV9iaW5kaW5nIiwidmVyc2lvbiI6MX0sImNsaWVudCI6eyJuYW1lIjoia2V5YmFzZS5pbyBnbyBjbGllbnQiLCJ2ZXJzaW9uIjoiMS4wLjE3In0sImN0aW1lIjoxNDczMzU5NTA4LCJleHBpcmVfaW4iOjUwNDU3NjAwMCwibWVya2xlX3Jvb3QiOnsiY3RpbWUiOjE0NzMzNTk0NTEsImhhc2giOiJmMjVkOTJlODU4MGIzZjhjOWI2MDkzNDkyNTU4NDhhZWNjOTFmY2ViZTFlNmZkZjNkZTQyOWYyMmJiZWQwMTg4NDkwZDFhZDQ1NWZjOTBhZWVmMzExZWZkNTZiN2ZlOGE1NjEyZDA5YmYxNzMyZDM5MzkzOTViNjJhMjIwNzU4YyIsInNlcW5vIjo2MjU0ODd9LCJwcmV2IjoiZDU4NzhiNTZhZTM2NzFkNDY0ODdkYTA4NjllMzBkNTVlZGU5MGUwOTRjNTg3NGU1M2IxMjRkM2JiMDZlYjA5NiIsInNlcW5vIjo4LCJ0YWciOiJzaWduYXR1cmUifaNzaWfEQPcCzYbkn5hhgMz4JuO1t41yjOXe3FH50Hrx8iA/sG0sK3+VLcblNkOt1Xc0pGsWfx9c1CLqb2mqT9dTfYfpeQ6oc2lnX3R5cGUgpGhhc2iCpHR5cGUIpXZhbHVlxCCfJBBtf949Lm8X10xQ/FWdRVVA0YCqSaBSphuxC16n9KN0YWfNAgKndmVyc2lvbgE=
+
+And finally, I am proving ownership of this host by posting or
+appending to this document.
+
+View my publicly-auditable identity here: https://keybase.io/zaz600
+
+==================================================================
