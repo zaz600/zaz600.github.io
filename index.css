@@ -1,7 +1,17 @@
+@font-face {
+  font-family: JetBrainsMono;
+  src: url("../font/JetBrainsMono-Regular.ttf");
+}
+
 .intro-header .page-heading {
   text-align: center;
 }
 
 body {
   color: #ebdbb2;
+  font-family: "JetBrainsMono", sans-serif;
+}
+
+hr {
+  background-color: #98971a;
 }
