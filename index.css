@@ -4,6 +4,8 @@
   --dim: #8aa2b6;
   --accent: #5dbdb6;
   --link: #6fd6cf;
+  --glow-alpha: 0.08;
+  --glow-radius: 55%;
 }
 
 html {
@@ -112,7 +114,11 @@ body {
   content: "";
   position: absolute;
   inset: 0;
-  background: radial-gradient(circle at 50% 20%, rgba(93, 189, 182, 0.08), transparent 55%);
+  background: radial-gradient(
+    circle at 50% 20%,
+    rgba(93, 189, 182, var(--glow-alpha)),
+    transparent var(--glow-radius)
+  );
   pointer-events: none;
 }
 
@@ -239,6 +245,11 @@ body {
 }
 
 @media (max-width: 768px) {
+  :root {
+    --glow-alpha: 0.05;
+    --glow-radius: 45%;
+  }
+
   body {
     padding: 1.25rem 0.75rem;
   }
@@ -270,6 +281,11 @@ body {
 }
 
 @media (max-width: 480px) {
+  :root {
+    --glow-alpha: 0.04;
+    --glow-radius: 40%;
+  }
+
   .terminal-body {
     padding: 1.2rem 1rem 1.3rem;
     font-size: 14px;
@@ -298,5 +314,9 @@ body {
   * {
     scroll-behavior: auto !important;
     transition: none !important;
+  }
+
+  .terminal-body::after {
+    animation: none !important;
   }
 }
