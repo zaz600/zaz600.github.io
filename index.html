@@ -102,17 +102,21 @@
                     <div class="man-section">
                         <div class="man-title">CONTACTS</div>
                         <div class="man-body contacts">
-                            <div>Email: <a href="#" class="email-link" data-user="zaz600" data-domain="gmail.com">zaz600 [at] gmail [dot] com</a></div>
-                            <div>Telegram: <a href="https://telegram.me/zaz600" target="_blank" rel="noopener">telegram.me/zaz600</a></div>
+                            <div>
+                                <a href="#" class="email-link" data-user="zaz600" data-domain="gmail.com"><span class="link-text">mail</span><span class="ref">(1)</span></a><span class="sep">, </span>
+                                <a href="https://telegram.me/zaz600" target="_blank" rel="noopener"><span class="link-text">telegram</span><span class="ref">(1)</span></a>
+                            </div>
                         </div>
                     </div>
 
                     <div class="man-section">
                         <div class="man-title">SEE ALSO</div>
                         <div class="man-body contacts">
-                            <div>GitHub: <a href="https://github.com/zaz600" target="_blank" rel="noopener">github.com/zaz600</a></div>
-                            <div>LinkedIn: <a href="https://linkedin.com/in/zaz600" target="_blank" rel="noopener">linkedin.com/in/zaz600</a></div>
-                            <div>Medium: <a href="https://medium.com/@zaz600" target="_blank" rel="noopener">medium.com/@zaz600</a></div>
+                            <div>
+                                <a href="https://github.com/zaz600" target="_blank" rel="noopener"><span class="link-text">github</span><span class="ref">(1)</span></a><span class="sep">, </span>
+                                <a href="https://linkedin.com/in/zaz600" target="_blank" rel="noopener"><span class="link-text">linkedin</span><span class="ref">(1)</span></a><span class="sep">, </span>
+                                <a href="https://medium.com/@zaz600" target="_blank" rel="noopener"><span class="link-text">medium</span><span class="ref">(1)</span></a>
+                            </div>
                         </div>
                     </div>
 
@@ -127,7 +131,6 @@
             const user = emailLink.getAttribute('data-user');
             const domain = emailLink.getAttribute('data-domain');
             const address = `${user}@${domain}`;
-            emailLink.textContent = address;
             emailLink.setAttribute('href', `mailto:${address}`);
         }
     </script>

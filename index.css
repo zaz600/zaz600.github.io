@@ -236,11 +236,24 @@ body {
 .contacts a {
   color: var(--link);
   text-decoration: none;
+}
+
+.contacts .link-text {
   border-bottom: 1px solid transparent;
   transition: border-color 0.2s ease;
 }
 
-.contacts a:hover {
+.ref {
+  font-size: 0.88em;
+  color: var(--dim);
+  vertical-align: super;
+}
+
+.sep {
+  color: var(--dim);
+}
+
+.contacts a:hover .link-text {
   border-color: var(--link);
 }
 
