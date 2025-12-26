@@ -1,17 +1,261 @@
-@font-face {
-  font-family: JetBrainsMono;
-  src: url("../font/JetBrainsMono-Regular.ttf");
+:root {
+  --bg-primary: #1a1b26;
+  --bg-secondary: #24283b;
+  --bg-tertiary: #2f334d;
+  --text-primary: #c0caf5;
+  --text-muted: #7aa2f7;
+  --accent: #7aa2f7;
+  --border: #3b4261;
+  --terminal-red: #f7768e;
+  --terminal-yellow: #e0af68;
+  --terminal-green: #9ece6a;
+  --terminal-command: #7aa2f7;
+  --terminal-output: #c0caf5;
+  --terminal-link: #7dcfff;
 }
 
-.intro-header .page-heading {
-  text-align: center;
+html {
+  font-size: 16px;
+  text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("font/JetBrainsMono-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("font/JetBrainsMono-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  color: #ebdbb2;
-  font-family: "JetBrainsMono", sans-serif;
+  font-family: "JetBrains Mono", ui-monospace, "SF Mono", "Cascadia Code", Menlo, Consolas, "DejaVu Sans Mono", monospace;
+  background: radial-gradient(circle at top, rgba(38, 51, 72, 0.35), transparent 55%), var(--bg-primary);
+  color: var(--text-primary);
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  font-synthesis: none;
+  font-size: 16px;
 }
 
-hr {
-  background-color: #98971a;
+.terminal-frame {
+  width: 100%;
+  max-width: 1120px;
+  background: var(--bg-secondary);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.45);
+}
+
+.terminal-header {
+  background: var(--bg-tertiary);
+  border-bottom: 1px solid var(--border);
+  padding: 0.6rem 0.9rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.terminal-buttons {
+  display: flex;
+  gap: 0.45rem;
+}
+
+.terminal-button {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  display: block;
+}
+
+.terminal-button-close {
+  background: var(--terminal-red);
+}
+
+.terminal-button-minimize {
+  background: var(--terminal-yellow);
+}
+
+.terminal-button-maximize {
+  background: var(--terminal-green);
+}
+
+.terminal-title {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  text-align: center;
+  flex: 1;
+  letter-spacing: 0.01em;
+}
+
+.terminal-body {
+  padding: 2.2rem 2.4rem 2.6rem;
+  position: relative;
+  background: linear-gradient(180deg, rgba(12, 15, 20, 0.96), rgba(10, 13, 18, 0.98));
+  font-size: 17px;
+  line-height: 1.55;
+}
+
+.terminal-body::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: repeating-linear-gradient(
+    180deg,
+    rgba(255, 255, 255, 0.015),
+    rgba(255, 255, 255, 0.015) 1px,
+    transparent 1px,
+    transparent 5px
+  );
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.terminal-line,
+.terminal-output {
+  position: relative;
+  z-index: 1;
+}
+
+.terminal-line {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  font-size: 17px;
+}
+
+.prompt {
+  color: var(--terminal-green);
+  font-weight: 700;
+}
+
+.command {
+  color: var(--terminal-command);
+}
+
+.terminal-output {
+  margin-top: 0.35rem;
+  padding-left: 1.45rem;
+  color: var(--terminal-output);
+  font-size: 16px;
+  line-height: 1.55;
+}
+
+.terminal-output div + div {
+  margin-top: 0.2rem;
+}
+
+.terminal-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem 1.2rem;
+}
+
+.terminal-list span {
+  white-space: nowrap;
+}
+
+.terminal-gap {
+  height: 0.9rem;
+}
+
+.contacts a {
+  color: var(--terminal-link);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color 0.2s ease;
+}
+
+.contacts a:hover {
+  border-color: var(--terminal-link);
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 1.25rem 0.75rem;
+  }
+
+  .terminal-frame {
+    width: 100%;
+  }
+
+  .terminal-body {
+    padding: 1.6rem 1.4rem 1.8rem;
+    font-size: 16px;
+  }
+
+  .terminal-line {
+    font-size: 16px;
+  }
+
+  .terminal-output {
+    font-size: 15px;
+  }
+}
+
+@media (max-width: 480px) {
+  .terminal-body {
+    padding: 1.35rem 1.1rem 1.45rem;
+    font-size: 15px;
+  }
+
+  .terminal-title {
+    font-size: 0.75rem;
+  }
+
+  .terminal-output {
+    padding-left: 1rem;
+    font-size: 14px;
+  }
+
+  .terminal-gap {
+    height: 0.7rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    transition: none !important;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .terminal-body::after {
+    content: "";
+    position: absolute;
+    left: 2rem;
+    bottom: 1.4rem;
+    width: 8px;
+    height: 1rem;
+    background: var(--terminal-command);
+    animation: blink 1.1s step-end infinite;
+    opacity: 0.7;
+  }
+
+  @keyframes blink {
+    50% {
+      opacity: 0;
+    }
+  }
 }
