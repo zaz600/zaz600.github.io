@@ -109,11 +109,11 @@ body {
 }
 
 .terminal-body {
-  padding: 2.2rem 2.4rem 2.6rem;
+  padding: 1.8rem 2.1rem 2rem;
   position: relative;
   background: linear-gradient(180deg, rgba(12, 15, 20, 0.96), rgba(10, 13, 18, 0.98));
-  font-size: 17px;
-  line-height: 1.55;
+  font-size: 16px;
+  line-height: 1.5;
 }
 
 .terminal-body::before {
@@ -149,16 +149,24 @@ body {
   font-weight: 700;
 }
 
+.prompt-hidden {
+  display: none;
+}
+
 .command {
   color: var(--terminal-command);
+}
+
+.command-hidden {
+  display: none;
 }
 
 .terminal-output {
   margin-top: 0.35rem;
   padding-left: 1.45rem;
   color: var(--terminal-output);
-  font-size: 16px;
-  line-height: 1.55;
+  font-size: 15px;
+  line-height: 1.5;
 }
 
 .terminal-output div + div {
@@ -177,6 +185,55 @@ body {
 
 .terminal-gap {
   height: 0.9rem;
+}
+
+.man-page {
+  display: flex;
+  flex-direction: column;
+  gap: 0.95rem;
+}
+
+.man-header {
+  display: flex;
+  justify-content: space-between;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+  letter-spacing: 0.08em;
+  color: var(--text-muted);
+}
+
+.man-section {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.man-title {
+  font-weight: 700;
+  color: var(--terminal-command);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.85rem;
+}
+
+.man-body {
+  color: var(--terminal-output);
+  padding-left: 1.1rem;
+}
+
+.man-highlight {
+  color: var(--terminal-link);
+  font-weight: 700;
+}
+
+.man-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem 1.25rem;
+}
+
+.man-list span {
+  white-space: nowrap;
 }
 
 .contacts a {
@@ -200,7 +257,7 @@ body {
   }
 
   .terminal-body {
-    padding: 1.6rem 1.4rem 1.8rem;
+    padding: 1.4rem 1.2rem 1.6rem;
     font-size: 16px;
   }
 
@@ -209,14 +266,22 @@ body {
   }
 
   .terminal-output {
-    font-size: 15px;
+    font-size: 14px;
+  }
+
+  .man-section {
+    gap: 0.3rem;
+  }
+
+  .man-title {
+    font-size: 0.8rem;
   }
 }
 
 @media (max-width: 480px) {
   .terminal-body {
-    padding: 1.35rem 1.1rem 1.45rem;
-    font-size: 15px;
+    padding: 1.2rem 1rem 1.3rem;
+    font-size: 14px;
   }
 
   .terminal-title {
@@ -224,12 +289,17 @@ body {
   }
 
   .terminal-output {
-    padding-left: 1rem;
-    font-size: 14px;
+    padding-left: 0.85rem;
+    font-size: 13px;
   }
 
   .terminal-gap {
     height: 0.7rem;
+  }
+
+  .man-header {
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
   }
 }
 
@@ -237,25 +307,5 @@ body {
   * {
     scroll-behavior: auto !important;
     transition: none !important;
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .terminal-body::after {
-    content: "";
-    position: absolute;
-    left: 2rem;
-    bottom: 1.4rem;
-    width: 8px;
-    height: 1rem;
-    background: var(--terminal-command);
-    animation: blink 1.1s step-end infinite;
-    opacity: 0.7;
-  }
-
-  @keyframes blink {
-    50% {
-      opacity: 0;
-    }
   }
 }
