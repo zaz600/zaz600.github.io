@@ -222,7 +222,7 @@ body {
 }
 
 .man-highlight {
-  color: var(--terminal-link);
+  color: inherit;
   font-weight: 700;
 }
 
